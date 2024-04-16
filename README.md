@@ -1,88 +1,49 @@
-# Azure AI Solutions Quick Start Template <img src="./utils/images/azure_logo.png" alt="Azure Logo" style="width:30px;height:30px;"/>
+# Chat with Your Enterprise at Scale <img src="./utils/images/azure_logo.png" alt="Azure Logo" style="width:30px;height:30px;"/>
 
-Welcome to the Azure AI Solutions Quick Start Template! This repository is designed to be a rapid launchpad for your Azure AI projects. Whether you're working in an enterprise or academic environment, this template integrates best practices to ensure a smooth development journey from start to finish.
+Welcome to the Azure Chat with Your Enterprise Data Accelerator. This project leverages the power of Fabric and AOAI to help you make the most of your data at scale.
 
-## 💼 Using this Template: Your Gateway to Advanced AI Development & Collaboration!
+## 📘 Overview
 
-- **🔄 Development Workflow**: Get to know our optimized workflow, designed to foster effective collaboration and a focus on product-centric development. See our [CONTRIBUTING GUIDE](./CONTRIBUTING.md) for more details.
+This accelerator serves as a blueprint for a reference architecture designed specifically for enterprise AI, ML, and GenAI applications. It utilizes Fabric, a comprehensive data platform capable of handling scalable data and context engineering. This architecture is designed to meet the high demands of AI and ML in large-scale enterprise environments, managing both structured and unstructured big data and complex operations with Spark serverless. It also supports the scalable implementation of Gen AI use cases, enhancing dynamic interactions with enterprise data.
 
-- **🚀 Advanced AI Development Process**: Understand the specifics of managing Azure AI projects, from issue reporting to pull requests, while adhering to best practices in advanced feature development and complex system troubleshooting.
+### Microsoft Fabric: The Comprehensive Data Platform for AI-Driven Enterprises
 
-- **🔍 Testing & QA for AI Systems**: Learn about the importance of rigorous testing in AI projects and discover efficient development and testing techniques tailored for AI systems with tools like Jupyter Notebooks and `%%ipytest`.
+## 💡 Value Proposition for Enterprises
 
-- **🔢 Version & Branching Strategies for AI Projects**: Get to know our versioning system and explore the project’s branching strategy, which ensures smooth transitions between development, staging, and production, especially for AI-driven applications.
+- **Seamless Data Integration**: Fabric integrates your data ecosystem, linking disparate sources into a unified, single-source virtual data lake—OneLake. Our LakeHouse architecture allows you to manage and utilize both structured and unstructured data effectively. With multi-cloud integration, data from Azure, AWS, GCP, and more is streamlined into one pipeline, enhancing your AI and ML operations without the complexities of multiple data silos.
 
-- To stay updated with the latest developments and document significant changes to this project, please refer to [CHANGELOG.md](CHANGELOG.md).
+- **Advanced Data Engineering**: Fabric incorporates serverless Spark capabilities, enabling enterprises to develop solutions throughout the data lifecycle with both low-code and pro-code options. From raw ingestion to the refined gold layer, every step is optimized for maximum efficiency.
 
-## Requirements
+- **Enhanced Contextual Data Processing**: Fabric facilitates serverless context engineering pipelines by leveraging the combined strengths of AOAI and Spark. It scales operations like embedding generation and addresses advanced multimodal and NLP challenges using GPT models as reasoning engines. We also provide solutions for chunking and indexing into vector databases at scale.
 
-> Modify as needed by project 
+- **Serverless Scalable Workloads**: Fabric is designed to manage the breadth and depth of your needs, ensuring seamless operations across data/context engineering for analytics, machine learning models, or next-gen GenAI applications, even under the most demanding conditions.
 
-### Setting Up Azure AI Services
+- **Inclusive Analytics and Visualization**: Empower your decision-makers with integrated Power BI for robust BI and data analytics. Deeply integrated into Fabric, Power BI provides rapid, intuitive access to data insights, fostering a data-centric culture within organizations and promoting centralized administration and governance.
 
-- Azure OpenAI Service: You need to create an Azure OpenAI service instance and obtain the API key. [start here](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
-- Azure Speech AI Service: Required for speech-to-text conversion. Set up the service and get the subscription key and region. [start here](https://azure.microsoft.com/en-us/products/ai-services/ai-speech)
-- Azure Language Service: Necessary for language understanding and intent recognition.[start here](https://azure.microsoft.com/en-us/products/ai-services/ai-language)
+## 🚀 Accelerator: Chat with Your Enterprise Data
 
-### Configuration Env variables
+This initiative serves as both an educational tool and a catalyst for expanding our Data Analytics and AI business. The objective is to tailor the outlined architecture to practical applications, ensuring comprehensive capture of end-to-end user history. While details are being finalized as we explore Big Data assets, our current plan involves synthesizing data from various sources, including unstructured documents, tabular reviews, and product images from major retailers like Amazon. Our goal is to evolve Fabric into the centralized nexus for data integration, enabling a multimodal "chat with your enterprise data" experience.
 
-We will now use environment variables to store our configuration. This is a more secure practice as it prevents sensitive data from being accidentally committed and pushed to version control systems.
+Key features include:
+- Multi-cloud data integration
+- Support for multiple data formats
+- Optimal use of serverless Spark for data and context engineering
 
-Create a `.env` file in your project root and add the following variables:
+![alt text](utils\images\image.png)
 
-```env
-# Your Azure Speech Service subscription key
-SPEECH_KEY=<Your_Azure_Speech_Service_Subscription_Key>
+This infrastructure will support ML/AI workflows and our GenAI system (chatbot LLM) "chat with your products", designed to intelligently contextualize interactions based on user content.
 
-# Your Azure Speech Service region
-SPEECH_REGION=<Your_Azure_Speech_Service_Region>
+## 🔧 Prerequisites
 
-# Your Azure Machine Learning workspace key
-INTENT_KEY=<Your_Azure_Machine_Learning_Workspace_Key>
+Please make sure you have met all the prerequisites for this project. A detailed guide on how to set up your environment and get ready to run all the notebooks and code in this repository can be found in the [REQUIREMENTS.md](REQUIREMENTS.md) file. Please follow the instructions there to ensure a smooth exprience.
 
-# Your Azure OpenAI API key
-OPENAI_KEY=<Your_Azure_OpenAI_API_Key>
 
-# The model used for chat
-CHAT_MODEL=<Your_Chat_Model>
+## 🔄 Continuous Integration/Continuous Deployment (CI/CD) (preview)
 
-# The model used for completions
-COMPLETION_MODEL=<Your_Completion_Model>
+This project leverages GitHub Actions for automating our DevOps lifecycle. More #TODO
 
-# The base URL for the OpenAI API
-OPENAI_API_BASE=<Your_OpenAI_API_Base_URL>
+You can view the configuration and status of our GitHub Actions workflows in the `.github/workflows` directory and the "Actions" tab of our GitHub repository, respectively.
 
-# The version of the OpenAI API
-OPENAI_API_VERSION=<Your_OpenAI_API_Version>
+## 💼 Contributing:
 
-# Your Azure Storage connection string
-AZURE_STORAGE_CONNECTION_STRING=<Your_Azure_Storage_Connection_String>
-``` 
-
-`SPEECH_KEY` and `SPEECH_REGION` are used for the Azure Speech Service.
-`INTENT_KEY` is used for the Azure Machine Learning workspace.
-`OPENAI_KEY`, `CHAT_MODEL`, `COMPLETION_MODEL`, `OPENAI_API_BASE`, and `OPENAI_API_VERSION` are used for the Azure OpenAI API.
-`AZURE_STORAGE_CONNECTION_STRING` is used for Azure Storage.
-
-> 📌 Note Remember not to commit the .env file to your version control system. Add it to your .gitignore file to prevent it from being tracked.
-
-## 🌲 Project Tree Structure
-
-```markdown
-📂 gbbai-azure-ai-template
-┣ 📂 notebooks <- For development, EDA, and quick testing (Jupyter notebooks for analysis and development).
-┣ 📂 src <- Houses main source code for data processing, feature engineering, modeling, inference, and evaluation.
-┣ 📂 test <- Runs unit and integration tests for code validation and QA.
-┣ 📂 utils <- Contains utility functions and shared code used throughout the project.
-┣ 📜 .env.sample <- Sample environment variables file. Replace with your own.
-┣ 📜 .pre-commit-config.yaml <- Config for pre-commit hooks ensuring code quality and consistency.
-┣ 📜 01-workshop.ipynb <- Jupyter notebook for the workshop.
-┣ 📜 CHANGELOG.md <- Logs project changes, updates, and version history.
-┣ 📜 USAGE.md <- Guidelines for using this template.
-┣ 📜 environment.yaml <- Conda environment configuration.
-┣ 📜 Makefile <- Simplifies common development tasks and commands.
-┣ 📜 pyproject.toml <- Configuration file for build system requirements and packaging-related metadata.
-┣ 📜 README.md <- Overview, setup instructions, and usage details of the project.
-┣ 📜 requirements-codequality.txt <- Requirements for code quality tools and libraries.
-┣ 📜 requirements.txt <- General project dependencies.
-```
+Eager to make significant contributions? Our **[CONTRIBUTING](./CONTRIBUTING.md)** guide is your essential resource! It lays out a clear path.

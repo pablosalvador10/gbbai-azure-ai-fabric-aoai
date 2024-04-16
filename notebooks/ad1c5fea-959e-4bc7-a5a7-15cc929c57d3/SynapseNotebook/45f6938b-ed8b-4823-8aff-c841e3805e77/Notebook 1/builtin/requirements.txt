@@ -1,0 +1,4 @@
+# core DS development
+synapseml
+python-dotenv
+
